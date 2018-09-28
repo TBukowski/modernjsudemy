@@ -1,0 +1,49 @@
+// FUNCTION DECLARATIONS
+
+function greet(firstName = 'John', lastName = 'Doe'){ // ES6 default
+    // ES5 - old way if no parameters are set, create default
+    // ES6 allows default to be set inside 
+    //if(typeof firstName === 'undefined'){firstName = 'John'}
+    //if(typeof lastName === 'undefined'){lastName = 'Doe'}
+    
+
+    
+    //console.log('Hello');  --- use ' return '
+    return 'Hello ' + firstName + ' ' + lastName;
+}
+
+//console.log(greet());
+
+// FUNCTION EXPRESSION
+
+const square = function(x=3){
+    return x*x;
+};
+
+//console.log(square());
+
+// IMMEDIATELY INVOKABLE FUNCTION EXPRESSIONS - IIFEs
+
+// (function(name){
+//     console.log('Hello ' + name );
+// })('Brad');
+
+// PROPERTY METHODS
+
+const todo = {
+    add: function(){
+        console.log('add todo..');
+    },
+
+    edit: function(id){
+        console.log(`edit todo ${id}`);
+    }
+}
+
+todo.delete = function(){
+    console.log('delete todo..');
+}
+
+todo.add();
+todo.edit(2);
+todo.delete();

@@ -1,0 +1,76 @@
+// FOR LOOP  - when you know how many iterations
+
+// for(let i = 0; i < 10; i++){
+//     //console.log('number: ' + i);
+//     if (i === 2) {
+//         console.log('2 is my favorite number');
+//         continue;
+//     }
+//     console.log('number: ' + i);
+
+//     if(i === 5){
+//         console.log('stop the loop');
+//         break;
+//     }
+// } 
+
+
+// WHILE LOOP - when number of iterations is unclear
+
+// let i = 0;
+
+// while(i < 10){
+//     console.log('number: ' + i);
+//     i++;
+// }
+
+
+// DO WHILE - ALWAYS GOING TO RUN AT LEAST ONCE
+
+// let i = 100;
+
+// do{
+//     console.log('number: ' + i);
+//     i++;
+// }
+
+// while(i < 10);
+
+
+// LOOP THROUGH ARRAY
+const cars = ['Ford', 'Chevy', 'Honda', 'Toyota'];
+
+// for(let i = 0; i < cars.length; i++){
+//     console.log(cars[i]); // need to use [] to get value instead of index
+// }
+
+
+// // FOREACH
+// cars.forEach(function(car, index, array){
+//     console.log(`${index} : ${car}`);
+//     console.log(array);
+// });
+
+// // MAP
+// const users = [
+//     {id:1, name:'John'},
+//     {id:2, name:'Sara'},
+//     {id:3, name:'Karen'},
+//     {id:4, name:'Steve'}
+// ];
+
+// const ids = users.map(function(user){
+//     return user.id;
+// });
+
+// console.log(ids);
+
+const user = {
+    firstName: 'John',
+    lastName: 'Doe',
+    age: 40
+}
+// FOR IN LOOP
+for(let x in user){
+    console.log(`${x} : ${user[x]}`);
+}

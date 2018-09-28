@@ -1,0 +1,35 @@
+// Global Scope
+var a = 1;
+let b = 2;
+const c = 3;
+// // Function scope
+// function test() {
+//     var a = 4;
+//     let b = 5;
+//     const c = 6;
+//     console.log('Function Scope: ', a, b, c);
+// }
+
+// test();
+
+// // Block Scope
+// if(true){
+    
+//     var a = 4;
+//     let b = 5;
+//     const c = 6;
+//     console.log('Block Scope: ', a, b, c);
+// }
+ 
+// See the difference between var and let in for loop
+// for(var a = 0; a < 10; a++) {
+//     console.log(`Loop: ${a}`);
+// }
+
+for(let a = 0; a < 10; a++) {
+    console.log(`Loop: ${a}`);
+}
+
+console.log('Global Scope: ', a, b, c);
+
+// let and const have a block level scope, var has a function scope

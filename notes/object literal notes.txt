@@ -1,0 +1,39 @@
+const person = {
+    firstName: 'Steve',
+    lastName: 'Smith',
+    age: 38,
+    email: 'steve@aol.com',
+    hobbies: ['football', 'talking about football'],
+    address: {
+        city: 'Miami',
+        state: 'Florida'
+    },
+    getBirthYear: function(){
+        return 2018 - this.age; // use ' this ' when pulling from inside an object
+    }
+}
+
+let val;
+
+val = person;
+
+val = person.firstName; //recommended
+val = ['lastName']; // not
+val = person.age;
+val = person.hobbies[1]; //get specific index from array
+val = person.address;
+val = person.address.state; //recommended
+val = person.address.['city']; // not
+val = person.getBirthYear();
+
+console.log(val);
+
+const people = [
+    {name: 'John', age: 30},
+    {name: 'Mike', age: 23}
+];
+
+//loop through an array
+for(let i = 0; i < people.length; i++){
+    console.log(people[i].name);
+}

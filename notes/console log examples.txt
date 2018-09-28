@@ -1,0 +1,84 @@
+/* .log examples
+console.log(123);
+console.log(true);
+
+var greeting = 'hello';
+console.log(greeting);
+
+console.log([1,2,3,4]);
+console.log({a:1, b:2});
+console.table({a:1, b:2});
+console.error("this is an error");
+console.clear();
+console.warn('warning warning');
+console.time('xyz');
+    console.log('Hello World');
+    console.log('Hello World');
+    console.log('Hello World');
+    console.log('Hello World');
+    console.log('Hello World');
+    console.log('Hello World');
+console.timeEnd('xyz');
+__________________________________________________________________________
+// PRIMITIVE 
+
+// String
+const name = 'John Doe';
+// Number 
+const age = 40;
+// Boolean
+const hasKids = false;
+// Null
+const car = null;
+// Undefined
+let test;
+// Symbol
+const sym = Symbol();
+
+
+// REFRENCE TYPES - Objects
+
+// Array
+const hobbies = ['movies', 'music'];
+
+//Object Literal
+const address = {
+    city: 'WF',
+    state : 'Texas'
+};
+
+const today = new Date();
+
+console.log(typeof hasKids);
+__________________________________________________________________________
+// simple math with numbers
+
+const num1 = 100;
+const num2 = 50;
+let val;
+
+val = num1 + num2;
+val = num1 - num2;
+val = num1 * num2;
+val = num1 / num2;
+val = num1 % num2;
+
+// math object
+val = Math.PI;
+val = Math.E;
+val = Math.round(3.12);
+val = Math.ceil(6.2);
+val = Math.floor(6.2);
+val = Math.sqrt(64);
+val = Math.abs(-3);
+val = Math.pow(8,2);
+val = Math.min(3,1,5,6,2,4);
+val = Math.max(3,1,5,6,2,4);
+val = Math.random();
+
+val = Math.floor(Math.random() * 21);
+
+console.log(val);
+__________________________________________________________________________
+
+*/
