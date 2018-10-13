@@ -1,25 +1,29 @@
-const personPrototypes = {
-    greeting: function(){
-        return `Hello There ${this.firstName} ${this.lastName}`;
-    },
-    getsMarried: function(newLastName){
-        this.lastName = newLastName;
+class Person {
+    constructor(fName, lName) {
+        this.fName = fName;
+        this.lName =lName;
+    }
+
+    greeting() {
+        return `Hello There ${this.fName} ${this.lName}`;
     }
 }
 
-const mary = Object.create(personPrototypes);
-mary.firstName = 'Mary';
-mary.lastName = 'Williams';
-mary.age = 30;
+class Customer extends Person {
+    constructor(fName, lName, phone, membership) {
+        super(fName, lName);
+        this.phone = phone;
+        this.membership = membership;
+    }
 
-mary.getsMarried('Thompson');
+    static getMembershipCost() {
+        return 500;
+    }
+}
 
-console.log(mary.greeting());
+const john = new Customer('John', 'Doe', '555-555-5555', 'Standard');
 
-const brad = Object.create(personPrototypes, {
-    firstName: {value: 'Brad'},
-    lastName: {value: 'Traversy'},
-    age: {value: 36}
-});
+console.log(john.greeting()); // gets greeting bc Person() is extended in Customer
 
-console.log(brad.greeting());
+// console.log(Person.getMembershipCost()); // throws error bc customer() is not extended in person
+console.log(Customer.getMembershipCost()); // allowed bc the static is inside Customer()
